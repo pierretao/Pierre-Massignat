@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pierre MASSIGNAT - Chi Nei Tsang & Qi Gong</title>
+    <style>
+        /* === Variables de Design === */
+        :root {
+            --principale: #ffffff;
+            --secondaire: #fcfaf5; 
+            --texte: #444444; 
+            --accent: #5e7d7a; 
+            --police-titre: 'Optima', 'Cambria', serif;
+            --police-corps: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: var(--police-corps);
+            margin: 0;
+            padding: 0;
+            background-color: var(--principale);
+            color: var(--texte);
+            line-height: 1.6; 
+            font-size: 1.1rem;
+        }
+
+        h1, h2, h3 {
+            font-family: var(--police-titre);
+            font-weight: normal;
+            color: var(--accent);
+            line-height: 1.2;
+        }
+
+        /* === Navigation === */
+        header {
+            background-color: rgba(255, 255, 255, 0.98);
+            padding: 1rem 5%;
+            position: fixed;
+            width: 90%;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+        }
+
+        .logo {
+            font-size: 1.2rem;
+            color: var(--accent);
+            text-decoration: none;
+            font-family: var(--police-titre);
+            letter-spacing: 1px;
+            font-weight: bold;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--texte);
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+
+        /* === Sections de base === */
+        section {
+            padding: 100px 10% 60px 10%;
+            min-height: auto;
+        }
+
+        /* Accueil */
+        #accueil {
+            display: flex;
+            flex-direction: column; /* Par défaut pour mobile */
+            align-items: center;
+            text-align: center;
+            background-color: var(--secondaire);
+            background-image: url('trois-carpes-koï-sur-fond-blanc.webp');
+            background-repeat: no-repeat;
+            background-position: bottom right;
+            background-size: 150px;
+            background-blend-mode: multiply;
+            padding-top: 140px;
+        }
+
+        .hero-text h1 { font-size: 2.2rem; margin-bottom: 1rem; }
+        
+        .photo-profil {
+            width: 180px;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 4px solid white;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            margin-top: 20px;
+        }
+
+        /* Descriptions */
+        .page-description {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .desc-content h2 { font-size: 2rem; margin-bottom: 15px; }
+
+        .img-illustratrice {
+            max-width: 200px;
+            height: auto;
+            filter: grayscale(100%) contrast(1.1); 
+            mix-blend-mode: multiply; 
+            opacity: 0.8;
+        }
+
+        /* Formations */
+        .formation-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 25px;
+        }
+        .formation-item {
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        /* Contact */
+        #contact { background-color: var(--secondaire); }
+        .contact-info {
+            background: white;
+            padding: 30px 20px;
+            border-radius: 15px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .contact-link {
+            display: block;
+            background-color: var(--accent);
+            color: white !important;
+            padding: 15px;
+            border-radius: 10px;
+            text-decoration: none;
+            margin: 10px 0;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        footer {
+            background-color: #2a2a2a;
+            color: #f1f1f1;
+            text-align: center;
+            padding: 2rem;
+            font-size: 0.9rem;
+        }
+
+        /* === AJUSTEMENTS POUR ORDINATEUR (Écrans larges) === */
+        @media (min-width: 900px) {
+            header { width: 90%; left: 5%; }
+            section { padding: 140px 15%; }
+            #accueil { flex-direction: row; text-align: left; background-size: 250px; }
+            .hero-text h1 { font-size: 3.5rem; }
+            .page-description { flex-direction: row; align-items: center; gap: 80px; }
+            .formation-grid { grid-template-columns: repeat(3, 1fr); }
+            .contact-link { background: none; color: var(--accent) !important; font-size: 2rem; padding: 0; }
+            .img-illustratrice { max-width: 280px; }
+            .logo { font-size: 1.4rem; }
+            nav a { font-size: 1rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="#accueil" class="logo">PIERRE MASSIGNAT</a>
+        <nav>
+            <ul>
+                <li><a href="#chi-nei-tsang">Soins</a></li>
+                <li><a href="#qi-gong">Cours</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="accueil">
+    <div class="hero-text">
+        <p style="font-family: var(--police-titre); letter-spacing: 2px; color: var(--accent); margin-bottom: 0;">PIERRE MASSIGNAT</p>
+        <h1 style="font-size: 2.8rem; margin-top: 10px;">"La guérison vient de l'intérieur"</h1>
+        <p style="font-style: italic; color: #888; margin-top: -15px; font-size: 0.9rem;">— Gilles Marin</p>
+        <p>Praticien en <strong>Chi Nei Tsang</strong> et enseignant de <strong>Qi Gong</strong> à Puyravault. Je vous accompagne par l'écoute du ventre et l'alchimie taoïste.</p>
+    </div>
+    <div class="hero-image">
+        <img src="20240820_144413.JPG" alt="Pierre Massignat" class="photo-profil">
+    </div>
+</section>
+
+    <section id="chi-nei-tsang">
+        <div class="page-description">
+            <div class="desc-content">
+                <h2>Le Chi Nei Tsang</h2>
+                <p>Une écoute du ventre par un toucher en douceur, permettant de connecter et de réintégrer les différentes parties de soi-même.</p>
+                <p>Les charges émotionnelles sont assimilées et transformées en énergie utile.</p>
+            </div>
+            <div class="img-container">
+                <img src="Massage-ventre-1.png" alt="Illustration Massage du Ventre" class="img-illustratrice">
+            </div>
+        </div>
+    </section>
+
+    <section id="qi-gong" style="background-color: #fafafa;">
+        <div class="page-description" style="flex-direction: column-reverse;">
+            <div class="img-container">
+                <img src="qi-gong.jpg" alt="Illustration posture Qi Gong" class="img-illustratrice">
+            </div>
+            <div class="desc-content">
+                <h2>Qi Gong</h2>
+                <p>Une invitation à explorer l'alchimie interne par le mouvement, la respiration et l'intention.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="parcours">
+        <div style="background: var(--accent); color: white; display: inline-block; padding: 2px 12px; border-radius: 20px; font-size: 0.8rem; margin-bottom: 10px;">Praticien depuis 2009</div>
+        <h2>Parcours</h2>
+        <div class="formation-grid">
+            <div class="formation-item">
+                <h3>Gilles Marin</h3>
+                <small>Chi Nei Tsang Fondamental/Somato-Émotionnel/Attitude globale Corporelle</small>
+            </div>
+            <div class="formation-item">
+                <h3>Mantak Chia</h3>
+                <small>Chi Nei Tsang III & Fusion des Cinq Éléments</small>
+            </div>
+            <div class="formation-item">
+                <h3>S. A. Wilger</h3>
+                <small>Cours clinique et pratique de Chi Nei Tsang</small>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="contact-info">
+            <h2>Prendre Rendez-vous</h2>
+            <p>7 rue des Templiers, 85450 PUYRAVAULT</p>
+            
+            <a href="tel:0610583175" class="contact-link">📞 Appeler : 06 10 58 31 75</a>
+            <a href="mailto:pm82@outlook.fr" class="contact-link" style="background-color: #7d5e5e;">✉️ Envoyer un Mail</a>
+
+            <div style="margin-top: 25px; border-radius: 15px; overflow: hidden; height: 200px;">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2777.632161247!2d-1.0772!3d46.389!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4804130000000000%3A0x0!2zN8KwMjMnMTkuOSJOIDHCsDA0JzM3LjkiVw!5e0!3m2!1sfr!2sfr!4v1710000000000" 
+                    width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 Pierre Massignat</p>
+    </footer>
+
+</body>
+</html>
