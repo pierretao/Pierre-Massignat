@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pierre MASSIGNAT - Chi Nei Tsang & Qi Gong</title>
     <style>
-        /* === Configuration Couleurs & Polices === */
         :root {
             --principale: #ffffff;
             --secondaire: #fcfaf5; 
@@ -16,7 +15,6 @@
         }
 
         html { scroll-behavior: smooth; }
-
         body {
             font-family: var(--police-corps);
             margin: 0; padding: 0;
@@ -26,14 +24,8 @@
             font-size: 1.1rem;
         }
 
-        h1, h2, h3 {
-            font-family: var(--police-titre);
-            font-weight: normal;
-            color: var(--accent);
-            line-height: 1.2;
-        }
+        h1, h2, h3 { font-family: var(--police-titre); font-weight: normal; color: var(--accent); }
 
-        /* === Navigation === */
         header {
             background-color: rgba(255, 255, 255, 0.98);
             padding: 1rem 5%;
@@ -43,121 +35,47 @@
             box-shadow: 0 2px 10px rgba(0,0,0,0.03);
         }
 
-        .logo {
-            font-size: 1.1rem;
-            color: var(--accent);
-            text-decoration: none;
-            font-family: var(--police-titre);
-            letter-spacing: 1px;
-            font-weight: bold;
-        }
+        .logo { font-size: 1.1rem; color: var(--accent); text-decoration: none; font-weight: bold; letter-spacing: 1px; }
 
-        nav ul {
-            list-style: none; margin: 0; padding: 0;
-            display: flex; gap: 15px;
-        }
+        nav ul { list-style: none; margin: 0; padding: 0; display: flex; gap: 15px; }
+        nav a { text-decoration: none; color: var(--texte); font-size: 0.85rem; }
 
-        nav a {
-            text-decoration: none;
-            color: var(--texte);
-            font-size: 0.85rem;
-            transition: color 0.3s;
-        }
+        section { padding: 100px 8% 50px 8%; }
 
-        /* === Sections === */
-        section {
-            padding: 100px 8% 60px 8%;
-        }
-
-        /* Accueil */
         #accueil {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
+            display: flex; flex-direction: column;
+            align-items: center; text-align: center;
             background-color: var(--secondaire);
             background-image: url('trois-carpes-koï-sur-fond-blanc.webp');
-            background-repeat: no-repeat;
-            background-position: bottom right;
-            background-size: 120px;
-            background-blend-mode: multiply;
+            background-repeat: no-repeat; background-position: bottom right;
+            background-size: 120px; background-blend-mode: multiply;
             padding-top: 130px;
         }
 
-        .hero-text h1 { font-size: 2.1rem; margin: 15px 0; line-height: 1.1; }
+        .hero-text h1 { font-size: 2.1rem; margin: 10px 0; line-height: 1.1; }
         .citation-auteur { font-style: italic; color: #888; font-size: 0.9rem; margin-top: -10px; margin-bottom: 20px; display: block; }
         
         .photo-profil {
-            width: 170px;
-            height: 170px;
-            object-fit: cover;
-            border-radius: 50%;
-            border: 4px solid white;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-            margin-top: 10px;
+            width: 170px; height: 170px;
+            object-fit: cover; border-radius: 50%;
+            border: 4px solid white; box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
 
-        /* Contenu des pages */
-        .page-description {
-            display: flex;
-            flex-direction: column;
-            gap: 30px;
-        }
+        .page-description { display: flex; flex-direction: column; gap: 20px; }
+        .img-illustratrice { max-width: 180px; filter: grayscale(100%); mix-blend-mode: multiply; opacity: 0.8; margin: 0 auto; display: block; }
 
-        .img-illustratrice {
-            max-width: 180px;
-            height: auto;
-            filter: grayscale(100%); 
-            mix-blend-mode: multiply; 
-            opacity: 0.8;
-            margin: 0 auto;
-            display: block;
-        }
+        .formation-item { background: #f9f9f9; padding: 15px; border-radius: 10px; margin-bottom: 15px; }
 
-        /* Parcours */
-        .formation-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 20px;
-        }
-        .formation-item {
-            background: #f9f9f9;
-            padding: 20px;
-            border-radius: 10px;
-        }
-
-        /* Contact */
-        #contact { background-color: var(--secondaire); }
-        .contact-info {
-            background: white;
-            padding: 30px 20px;
-            border-radius: 15px;
-            width: 100%;
-            box-sizing: border-box;
-            text-align: center;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
-        }
+        .contact-info { background: white; padding: 25px; border-radius: 15px; text-align: center; box-shadow: 0 5px 20px rgba(0,0,0,0.05); }
         .contact-link {
-            display: block;
-            background-color: var(--accent);
-            color: white !important;
-            padding: 15px;
-            border-radius: 10px;
-            text-decoration: none;
-            margin: 10px 0;
-            font-weight: bold;
-            font-size: 1.1rem;
+            display: block; background-color: var(--accent); color: white !important;
+            padding: 15px; border-radius: 10px; text-decoration: none;
+            margin: 10px 0; font-weight: bold; font-size: 1.1rem;
         }
 
-        footer {
-            background-color: #2a2a2a;
-            color: #f1f1f1;
-            text-align: center;
-            padding: 2rem;
-            font-size: 0.8rem;
-        }
+        footer { background: #2a2a2a; color: white; text-align: center; padding: 20px; font-size: 0.8rem; }
 
-        /* === Version Ordinateur === */
+        /* ORDINATEUR */
         @media (min-width: 900px) {
             header { width: 90%; left: 5%; padding: 1.2rem 5%; }
             .logo { font-size: 1.4rem; }
@@ -166,7 +84,7 @@
             #accueil { flex-direction: row; text-align: left; background-size: 250px; }
             .hero-text h1 { font-size: 3.2rem; }
             .page-description { flex-direction: row; align-items: center; gap: 60px; }
-            .formation-grid { grid-template-columns: repeat(3, 1fr); }
+            .formation-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
             .contact-link { background: none; color: var(--accent) !important; font-size: 1.8rem; padding: 0; }
             .img-illustratrice { max-width: 250px; }
         }
@@ -187,7 +105,7 @@
 
     <section id="accueil">
         <div class="hero-text">
-            <p style="color: var(--accent); letter-spacing: 2px; font-size: 0.9rem; margin-bottom: 5px; font-weight: bold;">PRATICIEN EN ARTS TAOÏSTES</p>
+            <span style="color: var(--accent); letter-spacing: 2px; font-size: 0.9rem;">PIERRE MASSIGNAT</span>
             <h1>"La guérison vient de l'intérieur"</h1>
             <span class="citation-auteur">— Gilles Marin</span>
             <p>Praticien en <strong>Chi Nei Tsang</strong> et enseignant de <strong>Qi Gong</strong> à Puyravault. Je vous accompagne par l'écoute du ventre et l'alchimie taoïste.</p>
@@ -201,8 +119,8 @@
         <div class="page-description">
             <div class="desc-content">
                 <h2>Le Chi Nei Tsang</h2>
-                <p>Une écoute du ventre par un toucher en douceur, permettant de connecter et de réintégrer les différentes parties de soi-même.</p>
-                <p>Les charges émotionnelles sont assimilées et transformées en énergie utile.</p>
+                <p>Provenant de l’ancienne tradition Taoïste, le Chi Nei Tsang applique le Chi Kung à une écoute du ventre. En alliant la respiration et un toucher en douceur, cette technique permet de connecter et de réintégrer toutes les différentes parties de soi-même.</p>
+                <p>Grâce à l’intelligence du système digestif, nos charges émotionnelles sont assimilées et transformées en énergie utile.</p>
             </div>
             <img src="Massage-ventre-1.png" alt="Illustration Massage du Ventre" class="img-illustratrice">
         </div>
@@ -213,7 +131,7 @@
             <img src="qi-gong.jpg" alt="Illustration posture Qi Gong" class="img-illustratrice">
             <div class="desc-content">
                 <h2>Qi Gong & Alchimie</h2>
-                <p>Une invitation à explorer l'alchimie interne par le mouvement, la respiration et l'intention pour transformer vos tensions en vitalité.</p>
+                <p>Une invitation à explorer l'alchimie interne par le mouvement, la respiration et l'intention pour transformer vos tensions et émotions en vitalité positive.</p>
             </div>
         </div>
     </section>
@@ -224,7 +142,7 @@
         <div class="formation-grid">
             <div class="formation-item">
                 <h3>Gilles Marin</h3>
-                <small>Chi Nei Tsang / Somato-Émotionnel / Attitude globale Corporelle</small>
+                <small>Chi Nei Tsang Fondamental / Somato-Émotionnel / Attitude globale Corporelle</small>
             </div>
             <div class="formation-item">
                 <h3>Mantak Chia</h3>
@@ -245,9 +163,9 @@
             <a href="tel:0610583175" class="contact-link">📞 Appeler : 06 10 58 31 75</a>
             <a href="mailto:pm82@outlook.fr" class="contact-link" style="background-color: #7d5e5e;">✉️ Envoyer un Mail</a>
 
-            <div style="margin-top: 25px; border-radius: 10px; overflow: hidden; height: 250px; border: 1px solid #eee;">
+            <div style="margin-top: 25px; border-radius: 10px; overflow: hidden; height: 300px; border: 1px solid #eee;">
                 <iframe 
-                    src="http://googleusercontent.com/maps.google.com/7" 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11094.613317804473!2d-1.0841961!3d46.395729!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48038b30e0f80735%3A0xc3f8379f8745300d!2s7%20Rue%20des%20Templiers%2C%2085450%20Puyravault!5e0!3m2!1sfr!2sfr!4v1710000000000!5m2!1sfr!2sfr" 
                     width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             </div>
         </div>
